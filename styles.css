@@ -1,0 +1,107 @@
+/* styling for layout */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: roboto, sans-serif;
+}
+
+nav {
+  background-color: rgb(248, 248, 248);
+  height: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.239);
+}
+
+.sidebar {
+  background-color: rgb(248, 248, 248);
+  height: 100vh;
+  float: left;
+  width: 15%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding: 10px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  font-weight: 700;
+  color: rgb(37, 99, 235);
+}
+
+#content {
+  float: right;
+  width: 85%;
+}
+
+footer {
+  text-align: right;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer span {
+  padding-right: 20px;
+  font-style: italic;
+  font-weight: 900;
+}
+
+.page {
+  animation: slide-fade-in 0.5s ease-in-out forwards;
+  padding-left: 50px;
+}
+
+/* global styles */
+h1 {
+  color: tomato;
+  font-size: 2.5em;
+}
+h2 {
+  font-size: 1.8em;
+}
+p {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+.bold {
+  font-weight: bold;
+}
+.text-left {
+  text-align: left;
+}
+/* overwrite the default styling of mathjax */
+mjx-container[jax="SVG"][display="true"] {
+  display: inline !important;
+  text-align: left !important;
+}
+
+/* media query for small screens */
+@media screen and (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+  #content {
+    width: 100%;
+  }
+}
+
+@keyframes slide-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
