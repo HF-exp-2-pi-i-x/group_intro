@@ -22,10 +22,37 @@ function handleRouteChange() {
 }
 
 window.addEventListener("hashchange", () => {
-  handleRouteChange;
+  handleRouteChange();
   //   reload page when there is route change to make latex works
-  location.reload();
+  //   location.reload();
 });
 
 // handle initial route
 handleRouteChange();
+
+// toggle to open sidebar
+const toggleButton = document.querySelector(".toggle_button");
+const sidebar = document.querySelector(".sidebar");
+
+toggleButton.addEventListener("click", () => {
+  console.log("toggle");
+  sidebar.classList.toggle("open");
+});
+
+// enable dark mode
+const sun = document.querySelector(".sun");
+const moon = document.querySelector(".moon");
+const body = document.querySelector("body");
+const nav = document.querySelector("nav");
+
+sun.addEventListener("click", () => {
+  body.classList.remove("dark-mode");
+  sidebar.classList.remove("dark-mode");
+  nav.classList.remove("dark-mode");
+});
+
+moon.addEventListener("click", () => {
+  body.classList.add("dark-mode");
+  sidebar.classList.add("dark-mode");
+  nav.classList.add("dark-mode");
+});

@@ -1,19 +1,66 @@
 /* styling for layout */
+body {
+  --text-color: black;
+  --bg-color: white;
+}
+
+body.dark-mode {
+  --text-color: white;
+  --bg-color: rgb(42, 46, 53);
+}
 
 body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
   margin: 0;
   min-height: 100vh;
   font-family: roboto, sans-serif;
 }
 
 nav {
-  background-color: rgb(248, 248, 248);
+  --nav-bg-color: rgb(248, 248, 248);
+}
+
+nav.dark-mode {
+  --nav-bg-color: rgb(18, 24, 27);
+}
+
+nav {
+  background-color: var(--nav-bg-color);
   height: 50px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.239);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle_button {
+  display: none;
+}
+
+.modes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar {
-  background-color: rgb(248, 248, 248);
+  --side-bg-color: rgb(248, 248, 248);
+}
+
+.sidebar.dark-mode {
+  --side-bg-color: rgb(18, 24, 27);
+}
+
+.sidebar {
+  background-color: var(--side-bg-color);
   height: 100vh;
   float: left;
   width: 15%;
@@ -70,6 +117,9 @@ h2 {
   font-size: 1.7em;
   width: 90%;
 }
+h3 {
+  color: #ff7f50;
+}
 p {
   font-size: 1.25em;
   line-height: 1.5em;
@@ -96,6 +146,14 @@ mjx-container[jax="SVG"][display="true"] {
 @media screen and (max-width: 900px) {
   .sidebar {
     display: none;
+  }
+  .sidebar.open {
+    position: fixed;
+    display: flex;
+    z-index: 2;
+  }
+  .toggle_button {
+    display: block;
   }
   #content {
     width: 100%;
