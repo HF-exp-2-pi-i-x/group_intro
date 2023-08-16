@@ -1,10 +1,12 @@
 import definition from "./page/definition.js";
+import example from "./page/example.js";
+import proof from "./page/proof.js";
 
 // define routes
 const routes = [
   { path: "", content: definition },
-  { path: "#example", content: "Example Page" },
-  { path: "#proof", content: "Proof Page" },
+  { path: "#example", content: example },
+  { path: "#proof", content: proof },
 ];
 
 const content = document.getElementById("content");
@@ -19,7 +21,11 @@ function handleRouteChange() {
   }
 }
 
-window.addEventListener("hashchange", handleRouteChange);
+window.addEventListener("hashchange", () => {
+  handleRouteChange;
+  //   reload page when there is route change to make latex works
+  location.reload();
+});
 
 // handle initial route
 handleRouteChange();
