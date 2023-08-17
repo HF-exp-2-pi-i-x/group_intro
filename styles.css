@@ -124,6 +124,7 @@ p {
   font-size: 1.25em;
   line-height: 1.5em;
   width: 90%;
+  text-align: justify;
 }
 a {
   text-decoration: none;
