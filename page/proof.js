@@ -10,7 +10,7 @@ const proof = `
     </span>
     </p>
     <video controls>
-        <source src="../assets/videos/ClosureExample.mp4" type="video/mp4"></source>
+        <source src="assets/videos/ClosureExample.mp4" type="video/mp4"></source>
     </video>
     <h2>Identity</h2>
     <p>
