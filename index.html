@@ -13,6 +13,15 @@
       rel="stylesheet"
     />
     <!-- use MathJax -->
+    <!-- enable inline latex -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [  ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
     <!-- cdn: recognize mathematics in both TeX and MathML notation, and ask it to generate its output using HTML with CSS  -->
     <script
       type="text/javascript"

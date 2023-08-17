@@ -3,7 +3,7 @@ const defintion = `
         <h1>What is a group?</h1>
         <p>A mathematical group (G,*) is a set G with a binary operation * that satisfies four axioms below</p>
         <h1>1. Closure </h2>
-        <h2 class="math inline">$$\\forall g_1,g_2 \\in G, g_1*g_2 \\in G $$ </h2>
+        <h2 class="math inline">\\(\\forall g_1,g_2 \\in G, g_1*g_2 \\in G \\) </h2>
         <p>This means when we select any two elements from the set G, combining them with binary operation * also gives an element inside G. For example, inside the group of all integers with addition <span class="math inline">$$(\\mathbb{Z},+)$$</span>, adding any two integers always gives us an integer. </p>
         <h1>2. Associativity</h2>
         <h2 class="math inline">$$\\forall g_1,g_2,g_3 \\in G, (g_1*g_2)*g_3=g_1*(g_2*g_3) $$</h2>
