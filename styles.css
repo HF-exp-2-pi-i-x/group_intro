@@ -140,6 +140,11 @@ video {
   height: auto;
 }
 /* overwrite the default styling of mathjax */
+.mjx-container {
+  display: inline !important;
+  text-align: left !important;
+}
+
 mjx-container[jax="SVG"][display="true"] {
   display: inline !important;
   text-align: left !important;
