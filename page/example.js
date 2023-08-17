@@ -6,7 +6,7 @@ const example = `
         <video controls>
             <source src="assets/videos/D3.mp4" type="video/mp4">
         </video>
-        <p>The above animation is built by Manim library. Source code is <a href="https://github.com/HF-exp-2-pi-i-x/3b1b_manim/blob/main/group.py" target="_blank"><img src="../assets/icons/new-tab.svg">&nbsp;here</a></p>
+        <p>The above animation is built by Manim library. Source code is <a href="https://github.com/HF-exp-2-pi-i-x/3b1b_manim/blob/main/group.py" target="_blank"><img src="assets/icons/new-tab.svg">&nbsp;here</a></p>
     </div>
 `;
 
