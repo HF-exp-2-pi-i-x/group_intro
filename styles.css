@@ -63,7 +63,7 @@ nav {
   background-color: var(--side-bg-color);
   height: 150vh;
   float: left;
-  width: 15%;
+  width: 25%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -87,7 +87,7 @@ nav {
 
 #content {
   float: right;
-  width: 85%;
+  width: 75%;
 }
 
 footer {
@@ -163,7 +163,7 @@ mjx-container[jax="CHTML"][display="true"] {
   .sidebar.open {
     display: flex;
     float: left;
-    width: 15%;
+    width: 25%;
     z-index: 2;
   }
   .toggle_button {
@@ -174,7 +174,7 @@ mjx-container[jax="CHTML"][display="true"] {
   }
   #content.open {
     float: right;
-    width: 85%;
+    width: 75%;
   }
 }
 
