@@ -145,7 +145,7 @@ video {
   text-align: left !important;
 }
 
-/* mjx-container[jax="SVG"][display="true"] {
+mjx-container[jax="SVG"][display="true"] {
   display: inline !important;
   text-align: left !important;
 }
@@ -153,7 +153,7 @@ video {
 mjx-container[jax="CHTML"][display="true"] {
   display: inline !important;
   text-align: left !important;
-} */
+}
 
 /* media query for small screens */
 @media screen and (max-width: 900px) {
