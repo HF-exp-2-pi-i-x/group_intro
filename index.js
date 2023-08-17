@@ -4,7 +4,7 @@ import proof from "./page/proof.js";
 
 // define routes
 const routes = [
-  { path: "", content: definition },
+  { path: "#", content: definition },
   { path: "#example", content: example },
   { path: "#proof", content: proof },
 ];
