@@ -4,9 +4,9 @@ import proof from "./page/proof.js";
 
 // define routes
 const routes = [
-  { path: "#", content: definition },
-  { path: "#example", content: example },
-  { path: "#proof", content: proof },
+  { path: "group_intro", content: definition },
+  { path: "group_intro/#example", content: example },
+  { path: "group_intro/#proof", content: proof },
 ];
 
 const content = document.getElementById("content");
