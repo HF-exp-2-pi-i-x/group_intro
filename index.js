@@ -24,7 +24,7 @@ function handleRouteChange() {
 window.addEventListener("hashchange", () => {
   handleRouteChange();
   //   reload page when there is route change to make latex works
-  //   location.reload();
+  location.reload();
 });
 
 // handle initial route
@@ -37,6 +37,7 @@ const sidebar = document.querySelector(".sidebar");
 toggleButton.addEventListener("click", () => {
   console.log("toggle");
   sidebar.classList.toggle("open");
+  content.classList.toggle("open");
 });
 
 // enable dark mode
@@ -46,13 +47,27 @@ const body = document.querySelector("body");
 const nav = document.querySelector("nav");
 
 sun.addEventListener("click", () => {
-  body.classList.remove("dark-mode");
-  sidebar.classList.remove("dark-mode");
-  nav.classList.remove("dark-mode");
+  disableDarkMode();
 });
 
 moon.addEventListener("click", () => {
+  enableDarkMode();
+});
+// check dark mode in localstorage
+let darkMode = localStorage.getItem("darkMode");
+if (darkMode === "enable") {
+  enableDarkMode();
+}
+// enable & disable
+function enableDarkMode() {
   body.classList.add("dark-mode");
   sidebar.classList.add("dark-mode");
   nav.classList.add("dark-mode");
-});
+  localStorage.setItem("darkMode", "enable");
+}
+function disableDarkMode() {
+  body.classList.remove("dark-mode");
+  sidebar.classList.remove("dark-mode");
+  nav.classList.remove("dark-mode");
+  localStorage.setItem("darkMode", "");
+}
