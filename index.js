@@ -73,8 +73,9 @@ function disableDarkMode() {
 }
 
 // reload page if mathjax not work
+console.log(MathJax);
 setInterval(function () {
-  if (typeof MathJax !== "undefined") {
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+  if (typeof MathJax == "undefined") {
+    location.reload();
   }
 }, 5000);
