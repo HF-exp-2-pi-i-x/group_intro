@@ -71,3 +71,10 @@ function disableDarkMode() {
   nav.classList.remove("dark-mode");
   localStorage.setItem("darkMode", "");
 }
+
+// reload page if mathjax not work
+setInterval(function () {
+  if (typeof MathJax !== "undefined") {
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+  }
+}, 5000);
