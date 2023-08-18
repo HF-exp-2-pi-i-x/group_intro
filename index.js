@@ -72,10 +72,10 @@ function disableDarkMode() {
   localStorage.setItem("darkMode", "");
 }
 
-// reload page if mathjax not work
-console.log(MathJax);
+// reload when mjx container not exist
 setInterval(function () {
-  if (typeof MathJax == "undefined") {
+  const container = document.querySelector("mjx-container");
+  if (!container) {
     location.reload();
   }
 }, 5000);
