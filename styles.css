@@ -116,6 +116,7 @@ h1 {
 h2 {
   font-size: 1.7em;
   width: 90%;
+  overflow: auto;
 }
 h3 {
   color: #ff7f50;
